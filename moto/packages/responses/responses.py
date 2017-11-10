@@ -323,7 +323,7 @@ class RequestsMock(object):
 
 
 # expose default mock namespace
-mock = _default_mock = RequestsMock(assert_all_requests_are_fired=False, pass_through=False)
+mock = _default_mock = RequestsMock(assert_all_requests_are_fired=False, pass_through=True)
 __all__ = []
 for __attr in (a for a in dir(_default_mock) if not a.startswith('_')):
     __all__.append(__attr)
